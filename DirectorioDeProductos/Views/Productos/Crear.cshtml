@@ -1,0 +1,40 @@
+﻿@model DirectorioDeProductos.Models.Producto
+
+@{
+    ViewData["Title"] = "Crear Producto";
+}
+
+<h1>Crear Producto</h1>
+
+<form asp-controller="Productos" asp-action="Crear" method="post">
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Precio" class="form-label"></label>
+        <input asp-for="Precio" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Categoria" class="form-label"></label>
+        <select asp-for="Categoria" class="form-select">
+            <option value="">Seleccione una categoría</option>
+            <option>Electrónica</option>
+            <option>Papelería</option>
+            <option>Mobiliario</option>
+            <option>Accesorios</option>
+        </select>
+        <span asp-validation-for="Categoria" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Productos" asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

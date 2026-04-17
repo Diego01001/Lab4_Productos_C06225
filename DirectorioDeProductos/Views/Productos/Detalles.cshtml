@@ -1,0 +1,20 @@
+﻿@model DirectorioDeProductos.Models.Producto
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+<h1>Detalles del Producto</h1>
+
+<div class="card">
+    <div class="card-body">
+        <p><strong>Id:</strong> @Model.Id</p>
+        <p><strong>Nombre:</strong> @Model.Nombre</p>
+        <p><strong>Precio:</strong> @Model.Precio.ToString("$0.00")</p>
+        <p><strong>Categoría:</strong> @Model.Categoria</p>
+    </div>
+</div>
+
+<p class="mt-3">
+    <a asp-controller="Productos" asp-action="Index" class="btn btn-secondary">Volver</a>
+</p>
