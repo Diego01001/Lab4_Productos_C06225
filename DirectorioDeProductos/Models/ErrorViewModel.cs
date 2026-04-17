@@ -1,4 +1,4 @@
-namespace DirectorioDeProductos.Models
+﻿namespace DirectorioDeProductos.Models
 {
     public class ErrorViewModel
     {
