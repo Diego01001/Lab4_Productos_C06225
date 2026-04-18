@@ -88,9 +88,9 @@ namespace DirectorioDeProductos.Controllers
             return View(producto);
         }
 
-        [HttpPost]
+        [HttpPost, ActionName("Eliminar")]
         [ValidateAntiForgeryToken]
-        public IActionResult EliminarConfirmado(int id)
+        public IActionResult EliminarPost(int id)
         {
             ProductoRepositorio.Eliminar(id);
             return RedirectToAction(nameof(Index));
